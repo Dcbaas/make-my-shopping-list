@@ -1,17 +1,16 @@
 import React from 'react';
-import { Text, TouchableHighlight } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 const Button = () => {
     return (
-       <TouchableHighlight 
+       <TouchableOpacity 
             style={styles.buttonStyle}
-            onPress={() => console.log(this)}
-            underlayColor={'#e91e63'}
+            onPress={() => console.log(this)}      
        >
            <Text style={styles.textStyle}>
                Click Me
            </Text>
-       </TouchableHighlight>
+       </TouchableOpacity>
     );
 };
 
@@ -21,6 +20,7 @@ const styles = {
         backgroundColor: '#12005e',
         borderRadius: 100,
         padding: 10,
+        alignSelf: 'stretch'
     },
     textStyle: {
         color: '#ffffff'
