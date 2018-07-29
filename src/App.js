@@ -8,7 +8,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={createStore(reducers)}> 
-        <View>
+        <View style={tempStyle.containerStyle}>
           <Text>DISCO BRO</Text>
         </View>
       </Provider>
@@ -16,3 +16,10 @@ export default class App extends React.Component {
   }
 }
 
+tempStyle = {
+  containerStyle: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1
+  }
+}
