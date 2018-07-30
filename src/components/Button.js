@@ -32,10 +32,11 @@ const styles = {
         alignItems: 'center',
         backgroundColor: '#12005e',
         borderRadius: 100,
-        padding: 10,
+        padding: 7,
         alignSelf: 'stretch'
     },
     textStyle: {
+        fontSize: 20,
         color: '#ffffff'
     }
 };
