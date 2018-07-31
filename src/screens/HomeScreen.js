@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import { Button } from '../components';
 import { CenterPanel } from '../components/commonPanels';
 /**
@@ -32,45 +32,58 @@ class HomeScreen extends Component {
      * @returns JSX that is the HomeScreen.
      */
     render() {
-        const { contentContainerStyle } = styles;
+        const { contentContainerStyle, titleTextStyle } = styles;
 
         return (
-            <View style={contentContainerStyle}>
+            <View style={{ justifyContent: 'space-around', flex: 1 }}>
                 <CenterPanel>
-                    <Button onPress={this.navigateScreens.bind(this, 'Meal')}>
-                        Create new Meal Plan
-                    </Button>
+                    <Text style={titleTextStyle}>Automate My Shopping List</Text>
                 </CenterPanel>
 
-                <CenterPanel>
-                    <Button onPress={this.navigateScreens.bind(this, 'Recipe')}>
-                        Create new Recipe
-                    </Button>
-                </CenterPanel>
+                <View style={contentContainerStyle}>
+                    <CenterPanel>
+                        <Button onPress={this.navigateScreens.bind(this, 'Meal')}>
+                            Create new Meal Plan
+                        </Button>
+                    </CenterPanel>
 
-                <CenterPanel>
-                    <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
-                        Load a Previous Shopping List
-                    </Button>
-                </CenterPanel>
+                    <CenterPanel>
+                        <Button onPress={this.navigateScreens.bind(this, 'Recipe')}>
+                            Create new Recipe
+                        </Button>
+                    </CenterPanel>
 
-                <CenterPanel>
-                    <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
-                        Placeholder Screen
-                    </Button>
-                </CenterPanel>
+                    <CenterPanel>
+                        <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
+                            Load a Previous Shopping List
+                        </Button>
+                    </CenterPanel>
 
+                    <CenterPanel>
+                        <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
+                            Placeholder Screen
+                        </Button>
+                    </CenterPanel>
+
+                </View>
             </View>
         );
     }
 }
 
+/**
+ * The styles are for the buttons container and the Text formatting.
+ */
 const styles = {
     contentContainerStyle: {
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1
 
+    },
+    titleTextStyle: {
+        fontSize: 36,
+        alignSelf: 'center'
     }
 };
 
