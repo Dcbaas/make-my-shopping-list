@@ -3,14 +3,14 @@ import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducer';
-import { Button } from './components';
+import Navigation from './Navigation';
 
 export default class App extends React.Component {
   render() {
     return (
       <Provider store={createStore(reducers)}> 
         <View style={tempStyle.containerStyle}>
-          <Button />
+          <Navigation />
         </View>
       </Provider>
     );
@@ -19,8 +19,7 @@ export default class App extends React.Component {
 
 const tempStyle = {
   containerStyle: {
-    alignItems: 'center',
-    justifyContent: 'center',
+ 
     flex: 1
   }
 };

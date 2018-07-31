@@ -21,7 +21,7 @@ const Button = (props) => {
             onPress={props.onPress}      
        >
            <Text style={styles.textStyle}>
-               Click Me
+               {props.children}
            </Text>
        </TouchableOpacity>
     );
@@ -33,7 +33,8 @@ const styles = {
         backgroundColor: '#12005e',
         borderRadius: 100,
         padding: 7,
-        alignSelf: 'stretch'
+        alignSelf: 'stretch',
+        flex: 1
     },
     textStyle: {
         fontSize: 20,
