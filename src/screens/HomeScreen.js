@@ -43,19 +43,21 @@ class HomeScreen extends Component {
                 </CenterPanel>
 
                 <CenterPanel>
-                    <Button>
+                    <Button onPress={this.navigateScreens.bind(this, 'Recipe')}>
                         Create new Recipe
                     </Button>
                 </CenterPanel>
 
                 <CenterPanel>
-                    <Button>
+                    <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
                         Load a Previous Shopping List
                     </Button>
                 </CenterPanel>
 
                 <CenterPanel>
-                    <Button>Placeholder Screen</Button>
+                    <Button onPress={this.navigateScreens.bind(this, 'Placeholder')}>
+                        Placeholder Screen
+                    </Button>
                 </CenterPanel>
 
             </View>
