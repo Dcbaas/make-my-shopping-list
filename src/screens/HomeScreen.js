@@ -35,7 +35,7 @@ class HomeScreen extends Component {
         const { contentContainerStyle, titleTextStyle } = styles;
 
         return (
-            <View style={{ justifyContent: 'space-around', flex: 1 }}>
+            <View style={{ justifyContent: 'space-around', flex: 1, backgroundColor: '#ffffff' }}>
                 <CenterPanel>
                     <Text style={titleTextStyle}>Automate My Shopping List</Text>
                 </CenterPanel>
