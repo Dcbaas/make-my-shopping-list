@@ -64,7 +64,6 @@ class HomeScreen extends Component {
                             Placeholder Screen
                         </Button>
                     </CenterPanel>
-
                 </View>
             </View>
         );
