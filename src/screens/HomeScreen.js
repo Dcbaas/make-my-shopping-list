@@ -23,15 +23,21 @@ class HomeScreen extends Component {
      * @param {string} screen The screen being navigated to.
      */
     navigateScreens(screen) {
-
+        this.props.navigation.navigate(screen);
     }
+
+    /**
+     * Renders the HomeScreen on the device.
+     * 
+     * @returns JSX that is the HomeScreen.
+     */
     render() {
         const { contentContainerStyle } = styles;
 
         return (
             <View style={contentContainerStyle}>
                 <CenterPanel>
-                    <Button>
+                    <Button onPress={this.navigateScreens.bind(this, 'Meal')}>
                         Create new Meal Plan
                     </Button>
                 </CenterPanel>
@@ -56,10 +62,6 @@ class HomeScreen extends Component {
         );
     }
 }
-
-const navigateScreens = screen => {
-    this.props.navigation.navigate(screen);
-};
 
 const styles = {
     contentContainerStyle: {
