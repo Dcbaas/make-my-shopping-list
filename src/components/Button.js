@@ -21,7 +21,7 @@ const Button = (props) => {
             onPress={props.onPress}      
        >
            <Text style={styles.textStyle}>
-               Click Me
+               {props.children}
            </Text>
        </TouchableOpacity>
     );
