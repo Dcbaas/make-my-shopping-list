@@ -13,9 +13,16 @@ const INITAL_STATE = {
     modalUp: false
 };
 
+/**
+ * The RecipeReducer handles actions for The Recipe Screen
+ * 
+ * @param {object} state
+ * @param {object} action
+ * @returns The updated state of the Recipe Screen
+ */
 export default (state = INITAL_STATE, action) => {
     const { type, payload } = action;
-    const { list, modalUp } = state;
+    const { list } = state;
     let newArray;
 
     switch (type) {
