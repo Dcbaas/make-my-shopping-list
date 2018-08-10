@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
-import { HomeScreen, PlaceHolderScreen, MealScreen, RecipeScreen } from './screens';
+import { HomeScreen, PlaceHolderScreen, MealScreen } from './screens';
+import RecipeScreen from './screens/RecipeScreen';
 
 const Navigator = createStackNavigator(
     {
@@ -9,7 +10,7 @@ const Navigator = createStackNavigator(
         Placeholder: PlaceHolderScreen
     },
     {
-        initialRouteName: 'Home'
+        initialRouteName: 'Recipe'
     }
 );
 

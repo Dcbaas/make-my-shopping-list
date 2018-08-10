@@ -11,6 +11,10 @@ import { connect } from 'react-redux';
  */
 
 
+/**
+ * The RecipeScreen screen renders the screen for creating recipes for use in the meal planning.
+ * 
+ */
 class RecipeScreen extends Component {
 
     render() {
