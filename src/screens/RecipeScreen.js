@@ -13,7 +13,7 @@ import { connect } from 'react-redux';
 
 /**
  * The RecipeScreen screen renders the screen for creating recipes for use in the meal planning.
- * 
+ * @class Disco is a fun thing to do.
  */
 class RecipeScreen extends Component {
 
