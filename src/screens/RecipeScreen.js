@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { FlatList, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 
 /**
+ * @fileOverview
  * The RecipeScreen is where a recipe is created to be used in a weekly meal plan
  * 
  * @author David Baas
@@ -13,16 +14,45 @@ import { connect } from 'react-redux';
 
 /**
  * The RecipeScreen screen renders the screen for creating recipes for use in the meal planning.
- * @class Disco is a fun thing to do.
+ * @class
  */
 class RecipeScreen extends Component {
+    state = {
+        list: []
+    }
+
+    componentWillMount() {
+        const newArray = [];
+
+        for (let i = 0; i < 50; ++i) {
+            newArray.push(new TestObj(i));
+        }
+        this.setState({ list: newArray });
+    }
+    renderIngredientItem(ingredient) {
+
+        return (
+            <Text>{ingredient.item.text}</Text>
+        );
+    }
 
     render() {
         return (
             <View>
-                <Text>Hello RecipeScreen</Text>
+                <FlatList 
+                    data={this.state.list}
+                    renderItem={this.renderIngredientItem}
+                    keyExtractor={ingredient => `${ingredient.index}`}
+                />
             </View>
         );
+    }
+}
+
+class TestObj {
+    constructor(index) {
+        this.text = 'this is some text';
+        this.index = index;
     }
 }
 
