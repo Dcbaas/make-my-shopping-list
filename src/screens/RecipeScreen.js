@@ -17,23 +17,13 @@ import { connect } from 'react-redux';
  * @class
  */
 class RecipeScreen extends Component {
-    state = {
-        list: []
-    }
 
     componentWillMount() {
-        const newArray = [];
-
-        for (let i = 0; i < 50; ++i) {
-            newArray.push(new TestObj(i));
-        }
-        this.setState({ list: newArray });
+       
     }
-    renderIngredientItem(ingredient) {
 
-        return (
-            <Text>{ingredient.item.text}</Text>
-        );
+    renderIngredientItem(ingredient) {
+       
     }
 
     render() {
@@ -44,15 +34,9 @@ class RecipeScreen extends Component {
                     renderItem={this.renderIngredientItem}
                     keyExtractor={ingredient => `${ingredient.index}`}
                 />
+                <Butt
             </View>
         );
-    }
-}
-
-class TestObj {
-    constructor(index) {
-        this.text = 'this is some text';
-        this.index = index;
     }
 }
 
