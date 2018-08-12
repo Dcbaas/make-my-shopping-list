@@ -5,8 +5,8 @@ import { Text, TouchableOpacity } from 'react-native';
  * The Button facilitate action within the Application
  * 
  * @author David Baas
- * @version 1.0 - 7/30/2018
- * @since 1.0 - 7/30/2018
+ * @version 1.0 - 8/12/2018
+ * @since 1.0 - 8/12/2018
  */
 
 /**
@@ -14,7 +14,7 @@ import { Text, TouchableOpacity } from 'react-native';
  * only its style specified while the action and the text inside must be spcified. This component 
  * is identical to the Button Component apart from the style which is a white background with a 
  * light purple border. 
- * @param {object} props 
+ * @param {object} props The components being passed to this button
  */
 const OutlinedButton = (props) => {
     return (
@@ -41,7 +41,7 @@ const styles = {
     },
     textStyle: {
         fontSize: 20,
-        color: '#ffffff'
+        color: '#7c43bd'
     }
 };
 
