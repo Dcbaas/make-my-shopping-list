@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, View, Text } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 
 /**
@@ -22,9 +22,9 @@ class RecipeScreen extends Component {
        
     }
 
-    renderIngredientItem(ingredient) {
+    // renderIngredientItem(ingredient) {
        
-    }
+    // }
 
     render() {
         return (
@@ -34,7 +34,7 @@ class RecipeScreen extends Component {
                     renderItem={this.renderIngredientItem}
                     keyExtractor={ingredient => `${ingredient.index}`}
                 />
-                <Butt
+                
             </View>
         );
     }
