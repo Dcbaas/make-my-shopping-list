@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { CenterPanel } from './commonPanels';
+import { CenterPanel } from './panels';
+import { OutlinedButton } from './buttons';
 
 /**
  * The ListItem file is a components that displays information about an item in a list.
@@ -23,15 +24,18 @@ import { CenterPanel } from './commonPanels';
 const ListItem = (props) => {
     return (
         <CenterPanel>
-            <Text style={textStyle}>
-                {props.children}
-            </Text>
+            <OutlinedButton onPress={props.onPress}>
+                <Text style={textStyle}>
+                    {props.children}
+                </Text>
+            </OutlinedButton>
         </CenterPanel>
     );
 };
 
 const textStyle = {
-    fontSize: 24
+    fontSize: 24,
+    color: '#7c43bd'
 };
 
 export { ListItem };

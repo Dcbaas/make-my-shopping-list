@@ -33,11 +33,13 @@ const styles = {
     buttonStyle: {
         alignItems: 'center',
         backgroundColor: '#ffffff',
-        borderRadius: 100,
+        borderRadius: 5,
         borderColor: '#7c43bd',
+        borderWidth: 1,
         padding: 7,
         alignSelf: 'stretch',
-        flex: 1
+        flex: 1,
+        margin: 0
     },
     textStyle: {
         fontSize: 20,
