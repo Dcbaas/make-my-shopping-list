@@ -27,6 +27,8 @@ const Button = (props) => {
     );
 };
 
+//Note the Margins stuff. May have to be added later.
+//Maybe add a style like "style={blah} with ...encoded, added"
 const styles = {
     buttonStyle: {
         alignItems: 'center',
