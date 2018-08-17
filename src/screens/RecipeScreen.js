@@ -28,18 +28,22 @@ class RecipeScreen extends Component {
         for (let i = 0; i < 50; ++i) {
             newArray.push(new TestObj(i));
         }
-        newArray.push(<Button onPress={this.dummyMethod}>Add Item</Button>)
+        newArray.push(50);
         this.setState({ list: newArray });
-    }
-
-    renderIngredientItem(ingredient) {
-        return (
-            <ListItem>{ingredient.item.text}</ListItem>
-        );
     }
 
     dummyMethod() {
         return 0;
+    }
+
+    renderIngredientItem(ingredient) {
+        console.log(ingredient);
+        if (ingredient.item === 50) {
+            return (<Button onPress={this.dummyMethod}>Add Item</Button>);
+        }
+        return (
+            <ListItem>{ingredient.item.text}</ListItem>
+        );
     }
 
     render() {
@@ -50,6 +54,7 @@ class RecipeScreen extends Component {
                     renderItem={this.renderIngredientItem}
                     keyExtractor={ingredient => `${ingredient.index}`}
                 />
+                
             </View>
         );
     }
