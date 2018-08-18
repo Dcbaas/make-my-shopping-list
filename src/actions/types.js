@@ -9,3 +9,6 @@ export const CURRENT_INGREDIENT_UNITS_CHANGED = 'current_ingredient_units_change
 export const ARRAY_NEW_ITEM = 'array_new_item';
 export const ARRAY_UPDATE_ITEM = 'array_update_item';
 export const ARRAY_REMOVE_ITEM = 'array_remove_item';
+export const CHANGE_RECIPE_NAME = 'change_recipe_name';
+export const TOGGLE_OPTIONS_MODAL = 'toggle_options_modal';
+export const TOGGLE_RECIPE_MODAL = 'toggle_recipe_modal';

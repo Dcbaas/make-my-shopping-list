@@ -9,8 +9,10 @@ import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM } from '../actions
  **/
 
 const INITAL_STATE = {
+    recipeName: '',
     list: [],
-    modalUp: false
+    ingredientModal: false,
+    optionsModal: false
 };
 
 /**

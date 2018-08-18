@@ -1,5 +1,4 @@
-import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM } from './types';
-import { Button } from '../components';
+import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM, CHANGE_RECIPE_NAME, TOGGLE_OPTIONS_MODAL, TOGGLE_RECIPE_MODAL } from './types';
 
 /**
  * RecipeActions.js handles all action creators for the Recipe Screen and Recipe Reducer.
@@ -45,5 +44,29 @@ export const removeArayItem = (index) => {
     return {
         type: ARRAY_REMOVE_ITEM,
         payload: index
+    };
+};
+
+export const changeRecipeName = (name) => {
+    return {
+        type: CHANGE_RECIPE_NAME,
+        payload: name
+    };
+};
+
+export const toggleOptionsModal = (toggle) => {
+    return {
+        type: TOGGLE_OPTIONS_MODAL,
+        payload: toggle
+    };
+};
+
+export const toggleRecipeModal = (toggle, existingIngredient) => {
+    return {
+        type: TOGGLE_RECIPE_MODAL,
+        payload: {
+            toggle: toggle,
+            existingIngredient: existingIngredient
+        }
     };
 };
