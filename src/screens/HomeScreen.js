@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { Button } from '../components';
-import { CenterPanel } from '../components/commonPanels';
+import { Button } from '../components/buttons';
+import { CenterPanel } from '../components/panels';
 /**
  * The Home Screen in the main menu of the Application.
  * 

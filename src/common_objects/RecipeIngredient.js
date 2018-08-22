@@ -6,21 +6,23 @@
  * list.
  * 
  * @author David Baas
- * @version 1.0 - 8/7/2018
+ * @version 1.0.1 - 8/12/2018
  * @since 1.0 8/7/2018
  */
 class RecipeIngredient {
 
     /**
-     * The constructor initializes all variables.
+     * The constructor initializes all variables. The key instance variable is used to provide a
+     * key item for the list component in the Recipe Screen. The key must be a string. I don't know
+     * why. 
      * 
      * @param {number} index The index of where this RecipeIngredient is in the array.
      * @param {string} name The name of this RecipeIngredint.
      * @param {number} amount The amount of this RecipeIngredint.
-     * @param {*} units the units for this RecipeIngredint.
+     * @param {number} units the units for this RecipeIngredint.
      */
     constructor(index, name, amount, units) {
-        this.index = index;
+        this.key = `${index}`;
         this.name = name;
         this.amount = amount;
         this.units = units;

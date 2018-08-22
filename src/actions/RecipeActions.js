@@ -1,4 +1,5 @@
-import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM } from './types';
+import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM, CHANGE_RECIPE_NAME,
+     TOGGLE_RECIPE_MODAL } from './types';
 
 /**
  * RecipeActions.js handles all action creators for the Recipe Screen and Recipe Reducer.
@@ -44,5 +45,30 @@ export const removeArayItem = (index) => {
     return {
         type: ARRAY_REMOVE_ITEM,
         payload: index
+    };
+};
+
+/**
+ * changeRecipeName updates the name of the current recipe being edited. It is triggered when the 
+ * header is changed in the Recipe screen. 
+ * @param {string} name The new name for the current recipe being edited. 
+ * @returns The action for changing the recipe name nad the new name.
+ */
+export const changeRecipeName = (name) => {
+    return {
+        type: CHANGE_RECIPE_NAME,
+        payload: name
+    };
+};
+
+/**
+ * toggleRecipeModal opens/closes the modal for editing the recipe.
+ * @param {boolean} toggle Enables/Disables the recipe modal.
+ * @returns The action to toggle the modal and the toggle status.
+ */
+export const toggleRecipeModal = (toggle) => {
+    return {
+        type: TOGGLE_RECIPE_MODAL,
+        payload: toggle
     };
 };

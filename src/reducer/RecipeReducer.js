@@ -1,4 +1,8 @@
-import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM } from '../actions/types';
+import { ARRAY_NEW_ITEM, 
+    ARRAY_UPDATE_ITEM, 
+    ARRAY_REMOVE_ITEM, 
+    CHANGE_RECIPE_NAME, 
+    TOGGLE_RECIPE_MODAL } from '../actions/types';
 
 /**
  * The RecipeReducer holds the state for the Recipe Screen.
@@ -9,8 +13,9 @@ import { ARRAY_NEW_ITEM, ARRAY_UPDATE_ITEM, ARRAY_REMOVE_ITEM } from '../actions
  **/
 
 const INITAL_STATE = {
+    recipeName: '',
     list: [],
-    modalUp: false
+    ingredientModal: false
 };
 
 /**
@@ -42,6 +47,12 @@ export default (state = INITAL_STATE, action) => {
                  ...list.slice(payload.index.index)];
             return { ...state, list: newArray };
         }
+
+        case CHANGE_RECIPE_NAME:
+            return { ...state, recipeName: payload };
+
+        case TOGGLE_RECIPE_MODAL:
+            return { ...state, ingredientModal: payload };
 
         default:
             return state;
