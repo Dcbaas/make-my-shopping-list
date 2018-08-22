@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { ListItem } from '../components/ListItem';
 import { Button } from '../components/buttons';
 import { EditableHeader } from '../components/headers/EditableHeader';
+import { EditIconButton } from '../components/buttons/EditIconButton';
 
 /**
  * @fileOverview
@@ -24,7 +25,7 @@ class RecipeScreen extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
             title: 'This is a Title',
-            headerRight: 
+            headerRight: <EditIconButton onPress={this.dummyMethod} /> 
         };
     }
 

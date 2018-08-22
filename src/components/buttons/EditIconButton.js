@@ -1,10 +1,11 @@
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
+import icon from '../../../assets/edit_icon.png';
 
 /**
  * The EditIconButton is a square button in the right side of the header to edit the recipe name.
  * @author David Baas
- * @version 0.9- 8/22/2018
+ * @version 1.0 - 8/22/2018
  * @since 0.9 - 8/22/2018
  */
 
@@ -26,7 +27,7 @@ const EditIconButton = (props) => {
             style={buttonStyle}
             onPress={props.onPress}
         >
-            <Image source={'./assets/edit_icon.png'} style={imageStyle} />
+            <Image source={icon} style={imageStyle} />
         </TouchableOpacity>
     );
 };
@@ -34,11 +35,15 @@ const EditIconButton = (props) => {
 const styles = StyleSheet.create({
     buttonStyle: {
        justifyContent: 'center',
-       alignItems: 'center' 
+       alignItems: 'center',
+       borderRadius: 3,
+       borderWidth: 2,
+       borderColor: '#000000'
     },
     imageStyle: {
-        height: 50,
-        width: 50
+        height: 35,
+        width: 35,
+        backgroundColor: '#ffffff'
     }
 
 });
