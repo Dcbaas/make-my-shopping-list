@@ -3,7 +3,6 @@ import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 import { ListItem } from '../components/ListItem';
 import { Button } from '../components/buttons';
-import { EditableHeader } from '../components/headers/EditableHeader';
 import { EditIconButton } from '../components/buttons/EditIconButton';
 
 /**
@@ -22,7 +21,7 @@ import { EditIconButton } from '../components/buttons/EditIconButton';
  */
 class RecipeScreen extends Component {
 
-    static navigationOptions = ({ navigation }) => {
+    static navigationOptions = () => {
         return {
             title: 'This is a Title',
             headerRight: <EditIconButton onPress={this.dummyMethod} /> 
@@ -47,7 +46,7 @@ class RecipeScreen extends Component {
 
     renderIngredientItem(ingredient) {
         console.log(ingredient);
-        if (ingredient.item === 50) {
+        if (typeof ingredient.item === 'number') {
             return (<Button onPress={this.dummyMethod}>Add Item</Button>);
         }
         return (
@@ -59,7 +58,7 @@ class RecipeScreen extends Component {
         return (
             <View style={screenStyle}>
                 <FlatList 
-                    data={this.state.list}
+                    data={this.props.list}
                     renderItem={this.renderIngredientItem}
                     keyExtractor={ingredient => `${ingredient.index}`}
                 />
