@@ -3,13 +3,14 @@ import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 import { ListItem } from '../components/ListItem';
 import { Button } from '../components/buttons';
+import { EditableHeader } from '../components/headers/EditableHeader';
 
 /**
  * @fileOverview
  * The RecipeScreen is where a recipe is created to be used in a weekly meal plan
  * 
  * @author David Baas
- * @version 0.1 - 8/9/2018
+ * @version 0.5 - 8/22/2018
  * @since 0.1 - 8/9/2018
  */
 
@@ -19,6 +20,13 @@ import { Button } from '../components/buttons';
  * @class
  */
 class RecipeScreen extends Component {
+
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: 'This is a Title',
+            headerRight: 
+        };
+    }
 
     state = {
         list: []
@@ -68,14 +76,15 @@ class TestObj {
 
 
 const mapStateToProps = ({ recipeScreenState }) => {
-    const { list, modalUp } = recipeScreenState;
+    const { list, ingredientModal, recipeName } = recipeScreenState;
 
-    return { list, modalUp };
+    return { list, ingredientModal, recipeName };
 };
 
 const screenStyle = {
     backgroundColor: '#ffffff',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flex: 1
 };
 
 export default connect(mapStateToProps)(RecipeScreen);

@@ -10,7 +10,13 @@ const Navigator = createStackNavigator(
         Placeholder: PlaceHolderScreen
     },
     {
-        initialRouteName: 'Recipe'
+        initialRouteName: 'Home',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#4a148c',
+                
+            },
+        }
     }
 );
 

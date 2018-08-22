@@ -7,6 +7,7 @@ import { StyleSheet, TextInput, View } from 'react-native';
  * @author David Baas
  * @version 1.0 8/17/2018
  * @since 1.0 8/17/2018
+ * @deprecated 8/22/2018
  */
 
  /**
@@ -40,12 +41,13 @@ const EditableHeader = ({ placeholder, onChangeText, value }) => {
  */
 const styles = StyleSheet.create({
     viewStyle: {
-        backgroundColor: '#4a148c',
-        flex: 1
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     textStyle: {
         color: '#ffffff',
-        fontSize: 36
+        fontSize: 16
     }
 });
 
