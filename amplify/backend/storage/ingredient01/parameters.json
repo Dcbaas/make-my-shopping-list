@@ -1,0 +1,7 @@
+{
+    "tableName": "Ingredients",
+    "partitionKeyName": "index",
+    "partitionKeyType": "N",
+    "sortKeyName": "name",
+    "sortKeyType": "S"
+}

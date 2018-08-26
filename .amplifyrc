@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "makemyshoppinglist-20180825160457-authRole",
+            "UnauthRoleArn": "arn:aws:iam::047059748207:role/makemyshoppinglist-20180825160457-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::047059748207:role/makemyshoppinglist-20180825160457-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "makemyshoppinglist-20180825160457-deployment",
+            "UnauthRoleName": "makemyshoppinglist-20180825160457-unauthRole",
+            "StackName": "makemyshoppinglist-20180825160457",
+            "StackId": "arn:aws:cloudformation:us-east-2:047059748207:stack/makemyshoppinglist-20180825160457/1e915750-a8a2-11e8-9158-0ae094dd1c0e"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "makemyshoppinglist-20180825160457-authRole",
+			"UnauthRoleArn": "arn:aws:iam::047059748207:role/makemyshoppinglist-20180825160457-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::047059748207:role/makemyshoppinglist-20180825160457-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "makemyshoppinglist-20180825160457-deployment",
+			"UnauthRoleName": "makemyshoppinglist-20180825160457-unauthRole",
+			"StackName": "makemyshoppinglist-20180825160457",
+			"StackId": "arn:aws:cloudformation:us-east-2:047059748207:stack/makemyshoppinglist-20180825160457/1e915750-a8a2-11e8-9158-0ae094dd1c0e"
+		}
+	},
+	"auth": {
+		"cognito6d4d6971": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/makemyshoppinglist-20180825160457-deployment/amplify-cfn-templates/auth/cognito6d4d6971-cloudformation-template.yml",
+				"logicalId": "authcognito6d4d6971"
+			},
+			"lastPushTimeStamp": "2018-08-25T20:46:13.856Z",
+			"output": {
+				"AppClientSecret": "1btl6d9e3cqovle23aff7u9016q62re65b0oc25fp3p61gc27qj2",
+				"UserPoolId": "us-east-2_RZMiSZqUa",
+				"AppClientIDWeb": "ojc6j2t4jfnbiv66c5g6te0l8",
+				"AppClientID": "29b1sfqd9aih0ol80spt9rv18c",
+				"IdentityPoolId": "us-east-2:ad36e1a5-ab06-4c49-a4ff-b88f347c9714",
+				"IdentityPoolName": "cognito6d4d6971_identitypool_6d4d6971",
+				"UserPoolName": "cognito6d4d6971_userpool_6d4d6971"
+			},
+			"lastPushDirHash": "aBzVOrwIIiW/fsZUkM1Fg4xQ20Q="
+		}
+	},
+	"storage": {
+		"ingredient01": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/makemyshoppinglist-20180825160457-deployment/amplify-cfn-templates/storage/ingredient01-cloudformation-template.json",
+				"logicalId": "storageingredient01"
+			},
+			"lastPushTimeStamp": "2018-08-25T20:46:13.856Z",
+			"output": {
+				"PartitionKeyName": "index",
+				"SortKeyName": "name",
+				"SortKeyType": "S",
+				"Region": "us-east-2",
+				"Arn": "arn:aws:dynamodb:us-east-2:047059748207:table/Ingredients",
+				"PartitionKeyType": "N",
+				"Name": "Ingredients"
+			},
+			"lastPushDirHash": "8sS5Ob+GGZxl9FdzsovsfhoxkWQ="
+		}
+	}
+}
